@@ -9,13 +9,12 @@ nodejd driver.
 
 sample:
 
-....
-
-var ep = require('./exceptionProtector');
-client = new cassandra.Client({contactPoints: LOCAL_HOST, keyspace: 'mykeyspace'});
-client.execute = ep.toSafeCallback(client.execute);
-client.execute = ep.toSafeCallback(client.batch);
-
-...
+.... <br/>
+var cassandra = require('cassandra-driver');<br/>
+var ep = require('./exceptionProtector');<br/>
+client = new cassandra.Client({contactPoints: LOCAL_HOST, keyspace: 'mykeyspace'});<br/>
+client.execute = ep.toSafeCallback(client.execute);<br/>
+client.execute = ep.toSafeCallback(client.batch);<br/>
+... <br/>
 
 
