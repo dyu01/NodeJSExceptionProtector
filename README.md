@@ -9,12 +9,6 @@ nodejd driver.
 
 #Sample:
 
-cassandra nodejs driver, if there is exception in callback of a database client.execute, you nodejs app will freeze at any on-going database query.
-
-NodeJSExceptionProtector is a simple wrapper to protect exceptions in callback in nodejs, especially for cassandra nodejd driver. 
-
-#Sample:
-
 ```javascript
 var cassandra = require('cassandra-driver');
 var ep = require('./exceptionProtector');
